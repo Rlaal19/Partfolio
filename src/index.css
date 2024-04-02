@@ -6,6 +6,6 @@
   body{
     margin: 0;
     @apply bg-primarybg;
-    @apply text-primarybase;
+    @apply text-primarycontent;
   }
 }
