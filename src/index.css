@@ -9,3 +9,17 @@
     @apply text-primarycontent;
   }
 }
+@keyframes append-animate {
+  from{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(-0%);
+    opacity: 1;
+  }
+}
+
+.new-show {
+  animation: append-animate 0.5s ease-out;
+}

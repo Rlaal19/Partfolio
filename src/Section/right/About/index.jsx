@@ -1,9 +1,14 @@
 import { faCircleUser } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useEffect } from "react";
 
-const About =() =>{
+const About =({onInitial,title = ""}) =>{
+    const SECTION_ID = `${title}_section`;
+    useEffect(() =>{
+        onInitial(SECTION_ID);
+    },[])
     return(
-        <div className=" space-y-3" id="About-section">
+        <div className=" space-y-3 scroll-m-14" id={SECTION_ID}>
             <div className=" text-primarysubtitle text-center bg-primaryTitle rounded-md font-mono py-1">About Me
             <FontAwesomeIcon className="animate-bounce ml-2" icon={faCircleUser} /></div>
             <div className=" text-primarycontent font-mono font-bold ">Hi my name is al ^^</div>

@@ -1,21 +1,26 @@
 import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Picture from "../picture";
 import Titlelink from "../titlelink";
 import Description from "../description";
 import Skill from "../skill";
 
 const ContentContrainer = ({
+    onInitial,
     title: sectionTitle = "",
     data = [],
 }) =>{
 
     const [isMouseEnter, setIsMouseEnter] = useState({});
-    const SECTION_ID = `${sectionTitle}-section`;
+    const SECTION_ID = `${sectionTitle}_section`;
+
+    useEffect(() =>{
+        onInitial(SECTION_ID);
+    },[])
 
     return(
-        <div id={SECTION_ID}>
+        <div id={SECTION_ID} className=" scroll-m-14">
             <div className=" bg-primaryTitle text-center text-primarysubtitle font-mono rounded-md py-1">{sectionTitle}</div>
             {
                 data.map(({date,
