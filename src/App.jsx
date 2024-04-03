@@ -23,20 +23,21 @@ function App() {
       return prev;
     });
   }
+  console.log("pp")
 
   const handleScroll = () =>{
     for (let index =0; index < sectionIds.length; index++){
-      const element = sectionIds[index];
-      const y = document.getElementById(element).getClientRects()[0].y;
-      const high = document.getElementById(element).getClientRects()[0].height * 0.5;
-      const viewHigh = window.innerHeight * 0.3;
+      let element = sectionIds[index];
+      let Top = document.getElementById(element).getClientRects()[0].y;
+      let high = document.getElementById(element).getClientRects()[0].height*0.5;
+      let viewHigh = window.innerHeight * 0.3;
 
-      if(y <= 0){
-        if(y+high > viewHigh){
+      if(Top <= 0){
+        if((Top+high) > viewHigh){
           setCurrentSection(element)
         }
       }
-      else if(y > 0 && y < viewHigh){
+      else if(Top > 0 && Top < viewHigh){
         setCurrentSection(element)
       }
     }

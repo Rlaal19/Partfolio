@@ -10,7 +10,7 @@ const Header =() =>{
             <div className='text-sm w-5/6 text-primarycontent font-mono font-bold'>Major: Computer Engineering</div>
             <div className='mt-2'>
 
-            <a href="#">
+            <a href={"#"}>
                 <span className=' rounded-md bg-primaryTitle text-primarysubtitle py-2 px-5'>View Resume
                     <FontAwesomeIcon className = ' animate-bounce ml-2' icon={faFile} size="lg" style={{color: "#FFF7FC",}} />
                 </span>

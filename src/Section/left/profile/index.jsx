@@ -2,9 +2,10 @@ import picpro from "../../../assets/Profile.jpg"
 
 const Profile =() =>{
     return(
-        <div className="flex flex-col-2 justify-center">
-            <img src={picpro} />
+        <div className="flex items-center justify-center">
+            <img className=" object-cover max-h-60 lg:h-full " src={picpro} />
         </div>
+
     )
 }
 export default Profile;
